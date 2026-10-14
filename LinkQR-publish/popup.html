@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LinkQR</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="logo">QR</div>
+      <div>
+        <h1>LinkQR</h1>
+        <p>Turn any web link into a QR code</p>
+      </div>
+    </header>
+
+    <section class="url-section">
+      <label for="url">URL</label>
+      <div class="input-row">
+        <input id="url" type="text" spellcheck="false" autocomplete="off" placeholder="https://example.com">
+        <button id="generate" class="primary">Generate</button>
+      </div>
+    </section>
+
+    <section class="qr-card" aria-label="QR code preview">
+      <div id="qr-container" class="qr-container">
+        <div id="empty-state" class="empty-state">Your QR code will appear here.</div>
+      </div>
+      <p id="status" class="status" role="status">Detecting current tab…</p>
+    </section>
+
+    <div class="actions">
+      <button id="download" class="secondary" disabled>Download PNG</button>
+      <button id="copy" class="secondary" disabled>Copy QR</button>
+    </div>
+
+    <footer>Created by <strong>Tushar Coder</strong></footer>
+  </main>
+
+  <script src="qrcode-lib.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
